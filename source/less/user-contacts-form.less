@@ -1,0 +1,98 @@
+.user-contacts-form {
+  @media (max-width: @mobile-only) {
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+  }
+}
+
+.user-contacts-form__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding-top: 24px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    width: 324px;
+    padding: 0;
+    padding-left: 44px;
+    box-sizing: border-box;
+  }
+}
+
+.user-contacts-form__title {
+  @media (min-width: @tablet) {
+    position: relative;
+    left: -19px;
+  }
+}
+
+.user-contacts-form__text {
+  margin-left: 15px;
+}
+
+.user-contacts-form__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 280px;
+  margin-bottom: 16px;
+
+  &:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 58px;
+    height: 58px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #e6e6e6;
+  }
+
+  &--phone::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    bottom: 20px;
+    z-index: 10;
+    right: 20px;
+    position: absolute;
+    background: url("../img/phone-icon.svg");
+  }
+
+  &--message::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    bottom: 20px;
+    z-index: 10;
+    right: 20px;
+    position: absolute;
+    background: url("../img/message-icon.svg");
+  }
+}
+
+.user-contacts-form__input {
+  padding: 16px;
+  background-color: #f2f2f2;
+  padding-right: 58px;
+  border: none;
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  z-index: -10;
+  font-family: "PT Sans", sans-serif;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
