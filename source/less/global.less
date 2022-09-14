@@ -1,0 +1,50 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+}
+
+@tablet: 768px;
+@desktop: 1200px;
+@mobile-only: 767px;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  height: 100%;
+  padding: 0;
+  min-width: 320px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  line-height: 21px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}

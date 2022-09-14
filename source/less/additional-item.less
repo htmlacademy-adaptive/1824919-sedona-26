@@ -1,0 +1,150 @@
+.additional-item {
+  padding-left: 47px;
+  padding-top: 8px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  width: 282px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet) {
+    width: auto;
+    min-height: 330px;
+    padding: 158px 32px 10px 32px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 158px 37px 10px 37px;
+  }
+}
+
+.additional-item__title {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: left;
+
+  @media (min-width: @tablet) {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 22px;
+  }
+}
+
+.additional-item__text {
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    text-align: center;
+  }
+}
+
+.additional-item--housing {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-image: url("../img/housing.svg");
+  }
+
+  @media (min-width: @tablet) {
+    &::after {
+      top: 60px;
+      left: 50%;
+      transform: translate(-37.5px, 0);
+      width: 75px;
+      height: 73px;
+      background-image: url("../img/housing-big.svg");
+    }
+
+    @media (min-width: @desktop) {
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+  }
+}
+
+.additional-item--food {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-image: url("../img/burger.svg");
+  }
+
+  @media (min-width: @tablet) {
+    padding-right: 40px;
+    padding-left: 40px;
+
+    &::after {
+      top: 60px;
+      width: 75px;
+      left: 50%;
+      height: 73px;
+      transform: translate(-37.5px, 0);
+      background-image: url("../img/burger-big.svg");
+    }
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+}
+
+.additional-item--souvenirs {
+  position: relative;
+
+  @media (max-width: @mobile-only) {
+    margin-bottom: 52px;
+  }
+
+  @media (max-width: @tablet) {
+    & br {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/souvenirs.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet) {
+    &::after {
+      top: 60px;
+      left: 50%;
+      width: 75px;
+      height: 73px;
+      transform: translate(-37.5px, 0);
+      background-image: url("../img/souvenirs-big.svg");
+    }
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
