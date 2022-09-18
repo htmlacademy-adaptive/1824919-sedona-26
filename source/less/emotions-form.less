@@ -6,6 +6,12 @@
 
   @media (min-width: @tablet) {
     grid-column: span 2;
+    padding-top: 58px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    margin-top: 32px;
   }
 }
 
@@ -16,20 +22,53 @@
   width: 280px;
   padding-top: 24px;
   padding-bottom: 50px;
+
+  @media (min-width: @tablet) {
+    padding-top: 0;
+    width: 648px;
+    padding-bottom: 36px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    padding-bottom: 44px;
+  }
 }
 
 .emotions-form__title {
   position: relative;
   left: -1px;
+
+  @media (min-width: @tablet) {
+    display: block;
+    margin: 0 auto;
+    margin-top: -70px;
+    padding: 0 15px;
+    background-color: #ffffff;
+    width: 380px;
+    box-sizing: border-box;
+  }
 }
 
 .emotions-form__comment-container {
   width: 279px;
+
+  @media (min-width: @tablet) {
+    width: 648px;
+    margin-top: 32px;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    width: 960px;
+    margin-top: 32px;
+  }
 }
 
 .emotions-form__input {
   font-family: "PT Sans", sans-serif;
-  width: 279px;
+  width: 100%;
+  max-width: 768px;
   min-height: 150px;
   border: none;
   background-color: #f2f2f2;
@@ -40,4 +79,22 @@
   padding: 16px;
   box-sizing: border-box;
   resize: none;
+
+  @media (min-width: @tablet) {
+    height: 160px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
 }

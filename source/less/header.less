@@ -4,6 +4,33 @@
   flex-wrap: wrap;
   position: relative;
   z-index: 60;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: @desktop) {
+    &::before {
+      content: "";
+      left: 0;
+      top: 0;
+      width: 4px;
+      z-index: -60;
+      position: absolute;
+      height: 100%;
+      box-shadow: -5px 0 10px 0 #a8a8a8;
+    }
+
+    &::after {
+      content: "";
+      right: 0;
+      top: 0;
+      width: 4px;
+      z-index: -60;
+      position: absolute;
+      height: 100%;
+      box-shadow: 5px 0 10px 0 #a8a8a8;
+    }
+  }
 }
 
 .main-header__logo {

@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: 324px 324px;
   }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 480px 480px;
+  }
 }
 
 .form__item {
@@ -15,6 +19,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .form__title {
@@ -40,6 +45,14 @@
 
   @media (min-width: @tablet) {
     grid-column: span 2;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 769px;
   }
 }
 
@@ -56,6 +69,16 @@
   box-sizing: border-box;
   min-height: 58px;
   min-width: 281px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    margin-right: auto;
+    width: 324px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 384px;
+  }
 }
 
 .form__notice {
@@ -67,4 +90,25 @@
   color: rgba(51, 51, 51, 0.6);
   margin: 0;
   margin-left: auto;
+
+  @media (min-width: @tablet) {
+    font-size: 14px;
+    align-self: center;
+  }
+}
+
+.form__item input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
 }

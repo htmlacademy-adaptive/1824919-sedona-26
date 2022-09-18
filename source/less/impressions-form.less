@@ -12,14 +12,18 @@
 .impressions-form__title {
   position: relative;
   left: -4px;
-  top: -13px;
 
   @media (min-width: @tablet) {
     padding: 0 50px;
+    top: -13px;
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
     background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 30px;
   }
 }
 
@@ -40,11 +44,17 @@
   padding-bottom: 24px;
 
   @media (min-width: @tablet) {
-    margin-top: 78px;
+    margin-top: 75px;
     padding: 0;
     width: 648px;
     margin-bottom: 81px;
     border-top: 1px solid #e5e5e5;
+  }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    margin-top: 80px;
+    margin-bottom: 90px;
   }
 }
 
@@ -64,6 +74,15 @@
     padding-left: 37px;
     column-gap: 46px;
   }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 53px;
+    box-sizing: border-box;
+  }
 }
 
 .impressions-form__text {
@@ -74,12 +93,17 @@
   line-height: 26px;
 }
 
-.impressions-form__label {
-  display: flex;
-  flex-direction: row;
+.impressions-form__icon {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  position: relative;
+  order: -1;
 }
 
-.imressions-form__input[type="radio"]:checked + .impressions-form__icon {
+.impressions-form__input[type="radio"]:checked + .impressions-form__icon {
   position: relative;
 
   &::after {
@@ -95,12 +119,20 @@
   }
 }
 
-.impressions-form__icon {
-  display: block;
-  width: 46px;
-  height: 46px;
-  background-color: #f2f2f2;
-  border-radius: 50%;
-  position: relative;
-  order: -1;
+.impressions-form__label {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  &:hover > .impressions-form__icon {
+    background-color: #e5e5e5;
+  }
+
+  &:active > .impressions-form__icon {
+    background-color: #d5d5d5;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
