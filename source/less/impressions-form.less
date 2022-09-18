@@ -93,12 +93,17 @@
   line-height: 26px;
 }
 
-.impressions-form__label {
-  display: flex;
-  flex-direction: row;
+.impressions-form__icon {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  position: relative;
+  order: -1;
 }
 
-.imressions-form__input[type="radio"]:checked + .impressions-form__icon {
+.impressions-form__input[type="radio"]:checked + .impressions-form__icon {
   position: relative;
 
   &::after {
@@ -114,12 +119,20 @@
   }
 }
 
-.impressions-form__icon {
-  display: block;
-  width: 46px;
-  height: 46px;
-  background-color: #f2f2f2;
-  border-radius: 50%;
-  position: relative;
-  order: -1;
+.impressions-form__label {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  &:hover > .impressions-form__icon {
+    background-color: #e5e5e5;
+  }
+
+  &:active > .impressions-form__icon {
+    background-color: #d5d5d5;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }

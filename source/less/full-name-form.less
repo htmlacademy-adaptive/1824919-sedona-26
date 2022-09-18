@@ -63,18 +63,17 @@
   }
 }
 
-.full-name-form__input,
-&::placeholder {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  color: #000000;
-}
-
 .full-name-form__input {
   padding: 16px;
-  background-color: #f2f2f2;
   border: none;
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  cursor: pointer;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }

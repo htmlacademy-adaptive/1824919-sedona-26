@@ -77,9 +77,22 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 16px;
+  cursor: pointer;
 
   &:nth-of-type(4) {
     margin-bottom: 0;
+  }
+
+  &:hover > .place-of-interest-form__icon {
+    background-color: #e5e5e5;
+  }
+
+  &:active > .place-of-interest-form__icon {
+    background-color: #d5d5d5;
+
+    & .place-of-interest-form__icon-tick {
+      fill: rgba(51, 51, 51, 0.3);
+    }
   }
 }
 

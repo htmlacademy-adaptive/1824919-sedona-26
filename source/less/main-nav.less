@@ -105,6 +105,17 @@
   }
 }
 
+@media (max-width: @mobile-only) {
+  .main-nav--nojs .main-nav__list {
+    display: flex;
+    z-index: 2;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet) {
   .main-nav__toggle {
     display: none;
