@@ -26,6 +26,17 @@
     width: 400px;
     min-height: 267px;
   }
+
+  .card--big & {
+    @media (min-width: @tablet) {
+      width: 648px;
+      height: auto;
+    }
+
+    @media (min-width: @desktop) {
+      width: 1200px;
+    }
+  }
 }
 
 .card__content-wrapper {
