@@ -1,0 +1,68 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__list {
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+
+  @media (max-width: @mobile-only) {
+    width: 100%;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: #e5e5e5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 424px 0 0 #e5e5e5, 0 850px 0 0 #e5e5e5, 0 1275px 0 0 #e5e5e5;
+    }
+   }
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: #ffffff;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      left: 0;
+      top: 0;
+      width: 4px;
+      z-index: -60;
+      position: absolute;
+      height: 100%;
+      box-shadow: -5px 0 10px 0 #a8a8a8;
+    }
+
+    &::after {
+      content: "";
+      right: 0;
+      top: 0;
+      width: 4px;
+      z-index: -60;
+      position: absolute;
+      height: 100%;
+      box-shadow: 5px 0 10px 0 #a8a8a8;
+    }
+  }
+}
+
+@media (max-width: @mobile-only) {
+  .catalog__card {
+    padding: 26px 0;
+  }
+}

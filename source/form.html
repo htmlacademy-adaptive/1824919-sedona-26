@@ -14,13 +14,13 @@
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link" href="index.html">ГЛАВНАЯ</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">ФОТО И ВИДЕО</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="form.html">ФОРМА ОТЗЫВА</a>
             </li>
             <li class="site-list__item">
@@ -45,137 +45,141 @@
       </section>
     </header>
     <main class="main-container">
-      <section class="introduction introduction--secondary">
-        <h2 class="introduction__title">
-          ОСТАВЬТЕ СВОЙ ОТЗЫВ
-        </h2>
-        <p class="introduction__text">
-          ПОМОГИТЕ НАШИМ ОТЕЛЯМ СТАТЬ ЛУЧШЕ! ОСТАВЬТЕ ОТЗЫВ О НИХ, А ТАКЖЕ О ПОСЕЩЕННЫХ ВАМИ ДОСТОПРИМЕЧАТЕЛЬНОСТЯХ
-        </p>
-      </section>
-      <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="form__item full-name-form">
-          <div class="full-name-form__wrapper">
-            <h3 class="form__title full-name-form__title">ПРЕДСТАВЬТЕСЬ:</h3>
-            <label class="full-name-form__label">
-              <span class="full-name-form__text">ИМЯ*:</span>
-              <input class="full-name-form__input" placeholder="Пётр" required>
-            </label>
-            <label class="full-name-form__label">
-              <span class="full-name-form__text">ФАМИЛИЯ*:</span>
-              <input class="full-name-form__input" placeholder="Пустота" required>
-            </label>
-            <label class="full-name-form__label">
-              <span class="full-name-form__text">ОТЧЕСТВО:</span>
-              <input class="full-name-form__input" placeholder="Викторович">
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="form__item user-contacts-form">
-          <div class="user-contacts-form__wrapper">
-            <h3 class="form__title user-contacts-form__title">КОНТАКТНАЯ ИНФОРМАЦИЯ:</h3>
-            <label class="user-contacts-form__label user-contacts-form__label--phone">
-              <span class="user-contacts-form__text">КОНТАКТНЫЙ ТЕЛЕФОН*:</span>
-              <input class="user-contacts-form__input" placeholder="Введите телефон" type="tel" required>
-            </label>
-            <label class="user-contacts-form__label user-contacts-form__label--message">
-              <span class="user-contacts-form__text">ЭЛЕКТРОННАЯ ПОЧТА*:</span>
-              <input class="user-contacts-form__input" placeholder="Введите e-mail" type="email" required>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="form__item impressions-form">
-          <div class="impressions-form__wrapper">
-            <h3 class="form__title impressions-form__title">ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ</h3>
-            <ul class="impressions-form__list">
-              <li class="impresions-form__item">
-                <label class="impressions-form__label">
-                  <input class="visually-hidden imressions-form__input" id="positive" name="radio" value="positive" type="radio" checked>
-                  <span class="impressions-form__icon"></span>
-                  <span class="impressions-form__text">Скорее положительное</span>
+      <div class="main-container__wrapper">
+        <section class="introduction introduction--secondary introduction--form">
+          <h2 class="introduction__title">
+            ОСТАВЬТЕ СВОЙ ОТЗЫВ
+          </h2>
+          <p class="introduction__text">
+            ПОМОГИТЕ НАШИМ ОТЕЛЯМ СТАТЬ ЛУЧШЕ! ОСТАВЬТЕ ОТЗЫВ О НИХ, А ТАКЖЕ О ПОСЕЩЕННЫХ ВАМИ ДОСТОПРИМЕЧАТЕЛЬНОСТЯХ
+          </p>
+        </section>
+        <div class="form-wrapper">
+          <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="form__item full-name-form">
+              <div class="full-name-form__wrapper">
+                <h3 class="form__title full-name-form__title">ПРЕДСТАВЬТЕСЬ:</h3>
+                <label class="full-name-form__label">
+                  <span class="full-name-form__text">ИМЯ*:</span>
+                  <input class="full-name-form__input" placeholder="Пётр" required>
                 </label>
-              </li>
-              <li class="impresions-form__item">
-                <label class="impressions-form__label">
-                  <input class="visually-hidden impressions-form__input" id="negative" name="radio" value="negative" type="radio">
-                  <span class="impressions-form__icon"></span>
-                  <span class="impressions-form__text">Скорее отрицательное</span>
+                <label class="full-name-form__label">
+                  <span class="full-name-form__text">ФАМИЛИЯ*:</span>
+                  <input class="full-name-form__input" placeholder="Пустота" required>
                 </label>
-              </li>
-              <li class="impresions-form__item">
-                <label class="impressions-form__label">
-                  <input class="visually-hidden imressions-form__input" id="nothing" name="radio" value="nothing" type="radio">
-                  <span class="impressions-form__icon"></span>
-                  <span class="impressions-form__text">Затрудняюсь ответить</span>
+                <label class="full-name-form__label">
+                  <span class="full-name-form__text">ОТЧЕСТВО:</span>
+                  <input class="full-name-form__input" placeholder="Викторович">
                 </label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <fieldset class="form__item place-of-interest-form">
-          <div class="place-of-interest-form__wrapper">
-            <h3 class="form__title place-of-interest-form__title">ПОСЕЩЕННЫЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ:</h3>
-            <ul class="place-of-interest-form__list">
-              <li class="place-of-interest-form__item">
-                <label class="place-of-interest-form__label">
-                  <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden checked>
-                  <span class="place-of-interest-form__icon">
-                    <svg class="place-of-interest-form__icon-tick" width="22" height="16">
-                      <use xlink:href="img/sprite.svg#icon-tick"></use>
-                    </svg>
-                  </span>
-                  <span class="place-of-interest-form__text">Мост Дьявола</span>
+              </div>
+            </fieldset>
+            <fieldset class="form__item user-contacts-form">
+              <div class="user-contacts-form__wrapper">
+                <h3 class="form__title user-contacts-form__title">КОНТАКТНАЯ ИНФОРМАЦИЯ:</h3>
+                <label class="user-contacts-form__label user-contacts-form__label--phone">
+                  <span class="user-contacts-form__text">КОНТАКТНЫЙ ТЕЛЕФОН*:</span>
+                  <input class="user-contacts-form__input" placeholder="Введите телефон" type="tel" required>
                 </label>
-              </li>
-              <li class="place-of-interest-form__item">
-                <label class="place-of-interest-form__label">
-                  <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden checked>
-                  <span class="place-of-interest-form__icon">
-                    <svg class="place-of-interest-form__icon-tick" width="22" height="16">
-                      <use xlink:href="img/sprite.svg#icon-tick"></use>
-                    </svg>
-                  </span>
-                  <span class="place-of-interest-form__text">Гора-Колокол</span>
+                <label class="user-contacts-form__label user-contacts-form__label--message">
+                  <span class="user-contacts-form__text">ЭЛЕКТРОННАЯ ПОЧТА*:</span>
+                  <input class="user-contacts-form__input" placeholder="Введите e-mail" type="email" required>
                 </label>
-              </li>
-              <li class="place-of-interest-form__item">
-                <label class="place-of-interest-form__label">
-                  <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden checked>
-                  <span class="place-of-interest-form__icon">
-                    <svg class="place-of-interest-form__icon-tick" width="22" height="16">
-                      <use xlink:href="img/sprite.svg#icon-tick"></use>
-                    </svg>
-                  </span>
-                  <span class="place-of-interest-form__text">Слайд-парк</span>
-                </label>
-              </li>
-              <li class="place-of-interest-form__item">
-                <label class="place-of-interest-form__label">
-                  <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden>
-                  <span class="place-of-interest-form__icon">
-                    <svg class="place-of-interest-form__icon-tick" width="22" height="16">
-                      <use xlink:href="img/sprite.svg#icon-tick"></use>
-                    </svg>
-                  </span>
-                  <span class="place-of-interest-form__text">Красные скалы</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <fieldset class="form__item emotions-form">
-          <div class="emotions-form__wrapper">
-            <h3 class="form__title emotions-form__title">ОПИШИТЕ СВОИ ЭМОЦИИ:</h3>
-            <div class="emotions-form__comment-container">
-              <textarea class="emotions-form__input">Опишите подробно все свои восторги</textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form__item impressions-form">
+              <div class="impressions-form__wrapper">
+                <h3 class="form__title impressions-form__title">ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ</h3>
+                <ul class="impressions-form__list">
+                  <li class="impresions-form__item">
+                    <label class="impressions-form__label">
+                      <input class="visually-hidden imressions-form__input" id="positive" name="radio" value="positive" type="radio" checked>
+                      <span class="impressions-form__icon"></span>
+                      <span class="impressions-form__text">Скорее положительное</span>
+                    </label>
+                  </li>
+                  <li class="impresions-form__item">
+                    <label class="impressions-form__label">
+                      <input class="visually-hidden impressions-form__input" id="negative" name="radio" value="negative" type="radio">
+                      <span class="impressions-form__icon"></span>
+                      <span class="impressions-form__text">Скорее отрицательное</span>
+                    </label>
+                  </li>
+                  <li class="impresions-form__item">
+                    <label class="impressions-form__label">
+                      <input class="visually-hidden imressions-form__input" id="nothing" name="radio" value="nothing" type="radio">
+                      <span class="impressions-form__icon"></span>
+                      <span class="impressions-form__text">Затрудняюсь ответить</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="form__item place-of-interest-form">
+              <div class="place-of-interest-form__wrapper">
+                <h3 class="form__title place-of-interest-form__title">ПОСЕЩЕННЫЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ:</h3>
+                <ul class="place-of-interest-form__list">
+                  <li class="place-of-interest-form__item">
+                    <label class="place-of-interest-form__label">
+                      <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden checked>
+                      <span class="place-of-interest-form__icon">
+                        <svg class="place-of-interest-form__icon-tick" width="22" height="16">
+                          <use xlink:href="img/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </span>
+                      <span class="place-of-interest-form__text">Мост Дьявола</span>
+                    </label>
+                  </li>
+                  <li class="place-of-interest-form__item">
+                    <label class="place-of-interest-form__label">
+                      <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden checked>
+                      <span class="place-of-interest-form__icon">
+                        <svg class="place-of-interest-form__icon-tick" width="22" height="16">
+                          <use xlink:href="img/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </span>
+                      <span class="place-of-interest-form__text">Гора-Колокол</span>
+                    </label>
+                  </li>
+                  <li class="place-of-interest-form__item">
+                    <label class="place-of-interest-form__label">
+                      <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden checked>
+                      <span class="place-of-interest-form__icon">
+                        <svg class="place-of-interest-form__icon-tick" width="22" height="16">
+                          <use xlink:href="img/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </span>
+                      <span class="place-of-interest-form__text">Слайд-парк</span>
+                    </label>
+                  </li>
+                  <li class="place-of-interest-form__item">
+                    <label class="place-of-interest-form__label">
+                      <input class="place-of-interest-form__input" name="visited" type="checkbox" hidden>
+                      <span class="place-of-interest-form__icon">
+                        <svg class="place-of-interest-form__icon-tick" width="22" height="16">
+                          <use xlink:href="img/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </span>
+                      <span class="place-of-interest-form__text">Красные скалы</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="form__item emotions-form">
+              <div class="emotions-form__wrapper">
+                <h3 class="form__title emotions-form__title">ОПИШИТЕ СВОИ ЭМОЦИИ:</h3>
+                <div class="emotions-form__comment-container">
+                  <textarea class="emotions-form__input">Опишите подробно все свои восторги</textarea>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form__button-container">
+              <button class="form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+              <p class="form__notice">* — Обязательные поля</p>
             </div>
-          </div>
-        </fieldset>
-        <div class="form__button-container">
-          <button class="form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-          <p class="form__notice">* — Обязательные поля</p>
+          </form>
         </div>
-      </form>
+      </div>
     </main>
     <footer class="main-footer">
       <a class="main-footer__logo">
@@ -187,43 +191,42 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <svg class="social__icon" fill="black" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <g>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.45 5.948C23.616 5.402 23.45 5 22.655 5H20.03C19.362 5 19.054 5.347 18.887 5.73C18.887 5.73 17.552 8.926 15.661 11.002C15.049 11.604 14.771 11.795 14.437 11.795C14.27 11.795 14.019 11.604 14.019 11.057V5.948C14.019 5.292 13.835 5 13.279 5H9.151C8.734 5 8.483 5.304 8.483 5.593C8.483 6.214 9.429 6.358 9.526 8.106V11.904C9.526 12.737 9.373 12.888 9.039 12.888C8.149 12.888 5.984 9.677 4.699 6.003C4.45 5.288 4.198 5 3.527 5H0.9C0.15 5 0 5.347 0 5.73C0 6.412 0.89 9.8 4.145 14.281C6.315 17.341 9.37 19 12.153 19C13.822 19 14.028 18.632 14.028 17.997V15.684C14.028 14.947 14.186 14.8 14.715 14.8C15.105 14.8 15.772 14.992 17.33 16.467C19.11 18.216 19.403 19 20.405 19H23.03C23.78 19 24.156 18.632 23.94 17.904C23.702 17.18 22.852 16.129 21.725 14.882C21.113 14.172 20.195 13.407 19.916 13.024C19.527 12.533 19.638 12.314 19.916 11.877C19.916 11.877 23.116 7.451 23.449 5.948H23.45Z" fill="white"/>
-              </g>
-              <defs>
-              <clipPath id="clip0_39251_981">
-              <rect width="24" height="24"/>
-              </clipPath>
-              </defs>
-              </svg>
-              <span class="visually-hidden">Мы в Вконтакте</span></a>
+              <img class="social-icon" src="img/vk-icon.svg" width="24" height="24" alt="vk">
+            </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <svg class="social__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.4393 4.62225L19.2705 19.566C19.0313 20.6205 18.408 20.883 17.5223 20.3865L12.6938 16.8285L10.3643 19.0695C10.1063 19.3275 9.891 19.5428 9.39375 19.5428L9.741 14.6258L18.6893 6.54C19.0785 6.1935 18.6045 6.00075 18.0848 6.348L7.02225 13.314L2.25976 11.823C1.22401 11.4998 1.20526 10.7873 2.47576 10.29L21.1035 3.11325C21.966 2.79 22.7205 3.30525 22.4393 4.623V4.62225Z" fill="white"/>
-                </svg>
-              <span class="visually-hidden">Мы в Телеграме</span></a>
+              <img class="social-icon" src="img/telegram-icon.svg" width="24" height="24" alt="telegram">
+            </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <svg width="24" height="24" class="social__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.1813 5H4.81331C3.30618 5 2 6.3 2 7.8V16.1C2 17.7 3.30618 19 4.81331 19H19.1813C20.7889 19 21.9946 17.7 21.9946 16.2V7.8C22.095 6.3 20.7889 5 19.1813 5ZM9.03326 15.4V8.6L15.8656 12L9.03326 15.4Z" fill="white"/>
-                </svg>
-              <span class="visually-hidden">Мы в Ютубе</span></a>
+              <img class="social-icon" src="img/youtube-icon.svg" width="24" height="24" alt="YouTube">
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
-          <svg class="copyright__icon" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.1506 2.25H18.0502L4.5 3.58944V27.221L18.0502 34.875L31.5 27.221V3.58944L18.1506 2.25ZM29.5929 13.8266L18.0502 7.32075V7.22507H17.9498L17.8494 7.1294V7.22507L6.40706 13.8266V5.21591L17.9498 4.06782L29.5929 5.21591V13.8266ZM17.9498 8.75587L29.4926 15.1661L24.9758 17.6536L17.8494 13.6353V14.9747L23.7714 18.3233L22.868 18.8017L17.8494 15.9315V17.2709L21.6636 19.4714L20.8606 19.9498L17.8494 18.2276V19.5671L19.7565 20.6195L17.9498 21.6719L6.50743 15.2617L17.9498 8.75587ZM6.40706 16.6968L17.8494 23.2027V24.1595L9.92007 19.6628V21.0022L17.9498 25.5946V26.647L9.92007 22.1503V23.4897L17.9498 28.0821L26.0799 23.3941V18.419L29.4926 16.5055V26.0729L17.9498 32.6745L6.40706 26.1686V16.6968Z"/>
-          </svg>
+          <b class="copyright__text">Разработано</b>
+          <img class="copyright__logo" src="img/htmlacademy-logo.svg" width="27" height="34" alt="HTML academy">
         </a>
       </div>
     </footer>
+    <section class="error">
+      <div class="error__inner">
+        <h2 class="error__title">Что-то пошло не так!</h2>
+        <p class="error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button type="button" class="error__button button">ок</button>
+      </div>
+    </section>
+    <section class="success">
+      <div class="success__inner">
+        <h2 class="success__title">Ваш отзыв отправлен!</h2>
+        <p class="success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <button type="button" class="success__button button">Закрыть окно</button>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

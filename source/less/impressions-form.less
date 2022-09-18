@@ -12,14 +12,18 @@
 .impressions-form__title {
   position: relative;
   left: -4px;
-  top: -13px;
 
   @media (min-width: @tablet) {
     padding: 0 50px;
+    top: -13px;
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
     background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 30px;
   }
 }
 
@@ -40,11 +44,17 @@
   padding-bottom: 24px;
 
   @media (min-width: @tablet) {
-    margin-top: 78px;
+    margin-top: 75px;
     padding: 0;
     width: 648px;
     margin-bottom: 81px;
     border-top: 1px solid #e5e5e5;
+  }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    margin-top: 80px;
+    margin-bottom: 90px;
   }
 }
 
@@ -63,6 +73,15 @@
     grid-template-columns: 247px 330px;
     padding-left: 37px;
     column-gap: 46px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 53px;
+    box-sizing: border-box;
   }
 }
 
