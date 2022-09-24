@@ -57,7 +57,7 @@
 }
 
 .form__button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   margin: 0 auto;
   font-weight: 700;
   font-size: 21px;
@@ -82,7 +82,7 @@
 }
 
 .form__notice {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 12px;
@@ -110,5 +110,17 @@ input[type="email"] {
   &:focus {
     background-color: #ffffff;
     outline: 4px solid #e5e5e5;
+  }
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @desktop) {
+    width: 1200px;
   }
 }

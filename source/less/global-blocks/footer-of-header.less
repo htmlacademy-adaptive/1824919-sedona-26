@@ -4,7 +4,6 @@
   width: 100%;
   margin: 0 auto;
 
-
   &::after {
     content: "";
     width: 100%;
@@ -27,12 +26,20 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile-secondary@2x.jpg");
+  }
+
   @media (min-width: @tablet) {
     height: 287px;
     padding: 0;
     padding-top: 95px;
     background-image: url("../img/back-tablet-secondary.jpg");
     background-position: center bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet-secondary@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop) {
@@ -40,11 +47,15 @@
     background-position: center bottom;
     height: 300px;
     padding-top: 103px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop-secondary@2x.jpg");
+    }
   }
 }
 
 .footer-of-header--main {
-  background-image: url("../img/big-photo.jpg");
+  background-image: url("../img/main-tablet-back.jpg");
   background-repeat: no-repeat;
   box-sizing: border-box;
   height: 389px;
@@ -52,10 +63,18 @@
   background-position: center center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-tablet-back@2x.jpg");
+  }
+
   @media (min-width: @tablet) {
     height: 518px;
     padding: 76px 19px 85px 19px;
     background-image: url("../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
   }
 }
 

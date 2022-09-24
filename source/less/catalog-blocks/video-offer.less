@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-top: 17px;
   margin-bottom: 5px;
+  position: relative;
 
   @media (min-width: @tablet) {
     padding-top: 57px;
@@ -90,23 +91,32 @@
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.video-offer__button {
+  cursor: pointer;
+  display: block;
+  border: 0;
+  width: 48px;
+  height: 54px;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  margin-left: -24px;
+  margin-top: -27px;
+  z-index: 2;
+  background-image: url("/img/video-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.video-offer__button-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet) {
     margin-bottom: 40px;
-  }
-
-  &::before {
-    content: "";
-    width: 48px;
-    height: 54px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -24px;
-    margin-top: -27px;
-    z-index: 2;
-    background-image: url("/img/video-icon.svg");
-    background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop) {

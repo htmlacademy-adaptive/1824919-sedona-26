@@ -114,6 +114,7 @@
 .contacts {
   @media (max-width: @mobile-only) {
     margin-bottom: 6px;
+    height: 350px;
   }
 
   @media (min-width: @tablet) {
@@ -155,4 +156,15 @@
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+.contacts--nojs {
+  background-image: url("../img/map-desktop.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-desktop@2x.jpg");
+  }
 }
