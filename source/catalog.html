@@ -6,6 +6,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -13,20 +17,20 @@
         <img src="./img/logo.svg" width="185" height="96" alt="Добро пожаловать в Седону!">
       </a>
       <nav class="main-nav main-nav--closed">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">ГЛАВНАЯ</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link" href="catalog.html">ФОТО И ВИДЕО</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">ФОРМА ОТЗЫВА</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link">HTML ACADEMY</a>
-            </li>
-          </ul>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">ГЛАВНАЯ</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link" href="catalog.html">ФОТО И ВИДЕО</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">ФОРМА ОТЗЫВА</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link">HTML ACADEMY</a>
+          </li>
+        </ul>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -134,11 +138,16 @@
           Все еще сомневаетесь?
         </h3>
         <p class="video-offer__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <picture class="video-offer__wrapper">
-          <source media="(min-width: 1200px)" srcset="img/video-preview-desktop.jpg">
-          <source media="(min-width: 768px)" srcset="img/video-preview-tablet.jpg">
-          <img class="video-offer__preview" src="img/video-preview.jpg" width="280" height="177" alt="Дорога на север">
-        </picture>
+        <div class="video-offer__button-container">
+          <picture class="video-offer__wrapper">
+            <source media="(min-width: 1200px)" srcset="img/video-preview-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/video-preview-tablet.jpg">
+            <img class="video-offer__preview" src="img/video-preview.jpg" width="280" height="177" alt="Дорога на север">
+          </picture>
+          <button class="video-offer__button">
+            <span class="visually-hidden">Воспроизвести</span>
+          </button>
+        </div>
       </section>
     </main>
     <footer class="main-footer">

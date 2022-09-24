@@ -26,18 +26,19 @@
     width: 400px;
     min-height: 267px;
   }
+}
 
-  .card--big & {
-    @media (min-width: @tablet) {
-      width: 648px;
-      height: auto;
-    }
+.card--big .card-wrapper {
+  @media (min-width: @tablet) {
+    width: 648px;
+    height: auto;
+  }
 
-    @media (min-width: @desktop) {
-      width: 1200px;
-    }
+  @media (min-width: @desktop) {
+    width: 1200px;
   }
 }
+
 
 .card__content-wrapper {
   display: flex;
