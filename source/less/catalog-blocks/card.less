@@ -28,18 +28,6 @@
   }
 }
 
-.card--big .card-wrapper {
-  @media (min-width: @tablet) {
-    width: 648px;
-    height: auto;
-  }
-
-  @media (min-width: @desktop) {
-    width: 1200px;
-  }
-}
-
-
 .card__content-wrapper {
   display: flex;
   flex-direction: column;
@@ -171,6 +159,17 @@
   @media (min-width: @tablet) {
     width: 648px;
     height: 400px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 1200px;
+  }
+}
+
+.card--big > div {
+  @media (min-width: @tablet) {
+    width: 648px;
+    height: auto;
   }
 
   @media (min-width: @desktop) {
