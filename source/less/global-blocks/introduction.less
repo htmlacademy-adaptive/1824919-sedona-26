@@ -36,9 +36,15 @@
     }
   }
 
+  @media (min-width: @tablet) {
+    padding-top: 47px;
+    padding-bottom: 42px;
+  }
+
   @media (min-width: @desktop) {
     padding-top: 61px;
     position: relative;
+    padding-bottom: 28px;
 
     &::before {
       content: "";
@@ -101,6 +107,10 @@
   @media (min-width: @tablet) {
     padding-top: 68px;
   }
+
+  @media (min-width: @desktop) {
+    padding-top: 100px;
+  }
 }
 
 .introduction--secondary .introduction__title {
@@ -138,9 +148,11 @@
 }
 
 @media (min-width: @desktop) {
-  padding-top: 115px;
-  margin-bottom: 0;
-  padding-bottom: 66px;
+  .introduction--form {
+    padding-top: 115px;
+    margin-bottom: 0;
+    padding-bottom: 66px;
+  }
 
   .introduction--form .introduction__title {
     margin-bottom: 30px;
@@ -167,8 +179,6 @@
 }
 
 @media (min-width: @desktop) {
-  padding-top: 100px;
-
   .introduction--catalog .introduction__title {
     margin-bottom: 28px;
   }
@@ -177,27 +187,29 @@
     margin-bottom: 58px;
   }
 
-  position: relative;
+  .introduction--catalog {
+    position: relative;
 
-  .introduction--catalog::before {
-    content: "";
-    left: 0;
-    top: 0;
-    width: 4px;
-    z-index: -60;
-    position: absolute;
-    height: 100%;
-    box-shadow: -5px 0 10px 0 #a8a8a8;
-  }
+    &::before {
+      content: "";
+      left: 0;
+      top: 0;
+      width: 4px;
+      z-index: -60;
+      position: absolute;
+      height: 100%;
+      box-shadow: -5px 0 10px 0 #a8a8a8;
+    }
 
-  .introduction--catalog::after {
-    content: "";
-    right: 0;
-    top: 0;
-    width: 4px;
-    z-index: -60;
-    position: absolute;
-    height: 100%;
-    box-shadow: 5px 0 10px 0 #a8a8a8;
+    &::after {
+      content: "";
+      right: 0;
+      top: 0;
+      width: 4px;
+      z-index: -60;
+      position: absolute;
+      height: 100%;
+      box-shadow: 5px 0 10px 0 #a8a8a8;
+    }
   }
 }
