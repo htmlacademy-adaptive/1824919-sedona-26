@@ -36,9 +36,15 @@
     }
   }
 
+  @media (min-width: @tablet) {
+    padding-top: 47px;
+    padding-bottom: 42px;
+  }
+
   @media (min-width: @desktop) {
     padding-top: 61px;
     position: relative;
+    padding-bottom: 28px;
 
     &::before {
       content: "";
@@ -101,6 +107,10 @@
   @media (min-width: @tablet) {
     padding-top: 68px;
   }
+
+  @media (min-width: @desktop) {
+    padding-top: 100px;
+  }
 }
 
 .introduction--secondary .introduction__title {
@@ -138,9 +148,11 @@
 }
 
 @media (min-width: @desktop) {
-  padding-top: 115px;
-  margin-bottom: 0;
-  padding-bottom: 66px;
+  .introduction--form {
+    padding-top: 115px;
+    margin-bottom: 0;
+    padding-bottom: 66px;
+  }
 
   .introduction--form .introduction__title {
     margin-bottom: 30px;
